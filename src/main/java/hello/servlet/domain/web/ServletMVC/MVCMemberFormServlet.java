@@ -12,8 +12,9 @@ import java.io.IOException;
 public class MVCMemberFormServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         String viewPath = "/WEB-INF/views/new-form.jsp";
         RequestDispatcher requestDispatcher = request.getRequestDispatcher(viewPath);
-        requestDispatcher.forward(request,response);//다른 서블릿, jsp 호출 서버 내부에서 다시 호출이 방생된다.
+        requestDispatcher.forward(request, response);//다른 서블릿, jsp 호출 서버 내부에서 다시 호출이 방생된다.
     }
 }
